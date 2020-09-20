@@ -54,4 +54,4 @@ SVD是一种降维方式
 ## 四、Glove总结
 Glove利用共现矩阵求得词向量，能够实现利用所有词对中心词的影响进行训练，总体来说相对其他的模型会更能表现出词与词之间细微的关系
 
-> GloVe: Global Vectors for Word Representation
+> 论文：GloVe: Global Vectors for Word Representation
