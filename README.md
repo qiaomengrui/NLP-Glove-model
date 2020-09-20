@@ -1,10 +1,10 @@
 # Glove模型
 **Glove模型目的：求出能表示出词与词之间的关系的词向量   
-Glove的整体思路：通过对词的共现计数矩阵进行降维，来得到词向量**
+Glove的整体思路：通过对词的共现计数矩阵进行降维，来得到词向量（共现：指语料中词汇一起出现的频率）**
 ## 一、 模型原理
 模型实现：根据整个语料建立一个大型的体现词共现情况的矩阵，其目标是优化减小重建损失，即降维之后的向量能尽量表达原始向量的完整信息
 ### 1. 共现矩阵  
-共现矩阵的概率比值可以用来区分词（共现：指语料中词汇一起出现的频率）  
+共现矩阵的概率比值可以用来区分词  
 共现矩阵的每一行分别代表每个词的词向量  
 假设样本数据集：
 1. I like deep learning.   
@@ -17,7 +17,7 @@ Glove的整体思路：通过对词的共现计数矩阵进行降维，来得到
 当词汇量过大时，向量就会越大，矩阵会呈现更高的维度，同时需要更大的存储空间，而矩阵也会有稀疏的部分，这时就需要降维处理
 ### 2. 目标函数
 目标函数经过推导得到的最终结果如下图  
-![目标函数](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E5%85%B1%E7%8E%B0%E7%9F%A9%E9%98%B5.png)  
+![目标函数](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png)  
 参数解释：
 * Xij：表示词j出现在中心词i的上下文的次数  
 * Xi：表示任何词出现在中心词i的上下文的次数
@@ -33,10 +33,10 @@ Glove的整体思路：通过对词的共现计数矩阵进行降维，来得到
 * 对于高频词并且包含信息极少的词，不能取过高的值  
 
 根据这三个特点，构造了权重函数，最终结果如下图  
-![权重函数](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E5%85%B1%E7%8E%B0%E7%9F%A9%E9%98%B5.png)  
+![权重函数](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E6%9D%83%E9%87%8D%E5%87%BD%E6%95%B0.png)  
 
 当超参数xmax=100，a=0.75，权重函数的图像如下  
-![给参数的权重函数图像](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E5%85%B1%E7%8E%B0%E7%9F%A9%E9%98%B5.png)  
+![给参数的权重函数图像](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E7%BB%99%E5%8F%82%E6%95%B0%E7%9A%84%E6%9D%83%E9%87%8D%E5%87%BD%E6%95%B0%E5%9B%BE%E5%83%8F.png)  
 ## 二. Glove相关知识
 ### 1. SVD
 SVD是一种降维方式  
