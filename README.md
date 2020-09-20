@@ -6,4 +6,4 @@ Glove模型是基于统计的模型，是通过对词的共现计数矩阵进行
 2. I like NLP.   
 3. I enjoy flying.
 通过统计词的出现次数绘出V\*V共现次数矩阵，如下图
-![skip-gram](pic/skip-gram.png)  
+![skip-gram](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E5%85%B1%E7%8E%B0%E7%9F%A9%E9%98%B5.png)  
