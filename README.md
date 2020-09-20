@@ -15,9 +15,9 @@ Glove的整体思路：通过对词的共现计数矩阵进行降维，来得到
 ![共现矩阵](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E5%85%B1%E7%8E%B0%E7%9F%A9%E9%98%B5.png)  
 缺点：  
 当词汇量过大时，向量就会越大，矩阵会呈现更高的维度，同时需要更大的存储空间，而矩阵也会有稀疏的部分，这时就需要降维处理
-### 2. 目标函数
-目标函数经过推导得到的最终结果如下图  
-![目标函数](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png)  
+### 2. 损失函数
+损失函数经过推导得到的最终结果如下图  
+![损失函数](https://github.com/qiaomengrui/NLP-Glove-model/blob/master/pic/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png)  
 参数解释：
 * Xij：表示词j出现在中心词i的上下文的次数  
 * Xi：表示任何词出现在中心词i的上下文的次数
