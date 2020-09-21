@@ -56,5 +56,5 @@ SVD是一种降维方式
 5. word2vec没有充分利用所有词，而Glove利用了所有词训练，所以效果要相比word2vec的训练效果好
 ## 四、Glove总结
 Glove利用共现矩阵求得词向量，能够实现利用所有词对中心词的影响进行训练，总体来说相对其他的模型会更能表现出词与词之间细微的关系  
-> Glove代码：https://github.com/qiaomengrui/NLP-Glove-model/edit/master/README.md  
+> Glove代码：https://github.com/qiaomengrui/NLP-Glove-model/tree/master/baseline  
 > 论文：GloVe: Global Vectors for Word Representation
